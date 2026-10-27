@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "constandfl-dynbatch"
+version = "0.1.0"
+description = "在多组负载下比较各策略的吞吐与延迟，给出适用场景"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "constandfl" }]
+keywords = ["llm", "cli", "analysis", "observability"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://constandfl.github.io"
+Repository = "https://github.com/constandfl/dynbatch"
+Issues = "https://github.com/constandfl/dynbatch/issues"
+
+[project.scripts]
+dynbatch = "dynbatch:main"
+
+[tool.setuptools]
+py-modules = ["dynbatch"]
